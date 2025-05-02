@@ -12,6 +12,21 @@ O projeto é um protótipo de aplicação web simples, construído com React e T
 * **Tailwind CSS:** Framework CSS utilitário para estilização rápida e responsiva.
 * **React Router DOM:** Para gerenciar a navegação entre as diferentes páginas da aplicação.
 * **React Icons:** Biblioteca de ícones (neste projeto, utilizamos ícones do Font Awesome e Ion Icons).
+* **Vite:** Ferramenta de build para projetos frontend.
+* **GitHub Actions:** Para automação do deploy.
+
+## Deploy no GitHub Pages (Automatizado)
+
+O deploy deste MVP no GitHub Pages é automatizado via **GitHub Actions**.
+
+* A cada push para a branch configurada no workflow (`.github/workflows/deploy.yml`, ex: `deploy-pages` ou `main`), um workflow é disparado.
+* Este workflow constrói o projeto (`npm run build` ou `yarn build`) e publica o conteúdo da pasta `dist/` no GitHub Pages.
+* A configuração do GitHub Pages no repositório deve estar definida para usar **"GitHub Actions"** como fonte.
+
+**O site publicado pode ser acessado em:**
+
+`https://https://bisauti.github.io/furia-fan-site-mvp/`
+
 
 ## Configuração e Execução
 
