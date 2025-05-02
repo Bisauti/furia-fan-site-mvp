@@ -5,12 +5,13 @@ import App from './App.jsx';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 
+const REPO_NAME = '/furia-fan-site-mvp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        {/* Envolva o componente App com BrowserRouter */}
-        <BrowserRouter> {/* **CLASSE CHAVE AQUI** */}
-            <App />
-        </BrowserRouter>
-    </React.StrictMode>,
+  <React.StrictMode>
+    {/* Adicione a propriedade basename ao BrowserRouter */}
+    <BrowserRouter basename={REPO_NAME}> {/* **CLASSE CHAVE AQUI** */}
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
 );
