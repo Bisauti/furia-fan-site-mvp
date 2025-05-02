@@ -1,6 +1,6 @@
 // src/App.jsx
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Chatbot from './pages/Chatbot';
 import Dashboard from './pages/Dashboard';
@@ -8,6 +8,10 @@ import Perfil from './pages/Perfil';
 import Feed from './pages/Feed';
 
 export default function App() {
+    const location = useLocation();
+    console.log('Current location perceived by React Router:', location.pathname);
+
+
     return (
         <div className="h-screen flex flex-col bg-gray-900 text-gray-100">
             <nav className="p-4 bg-black shadow-lg">
@@ -19,7 +23,7 @@ export default function App() {
                     <li><Link to="/dashboard" className="hover:text-purple-400">Dashboard</Link></li>
                 </ul>
             </nav>
-            <main className="flex-1 overflow-y-auto"> 
+            <main className="flex-1 overflow-y-auto">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/feed" element={<Feed />} />
