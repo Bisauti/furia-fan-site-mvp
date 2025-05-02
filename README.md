@@ -25,7 +25,7 @@ O deploy deste MVP no GitHub Pages é automatizado via **GitHub Actions**.
 
 **O site publicado pode ser acessado em:**
 
-`https://https://bisauti.github.io/furia-fan-site-mvp/`
+`https://bisauti.github.io/furia-fan-site-mvp/`
 
 
 ## Configuração e Execução
