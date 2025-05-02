@@ -41,6 +41,10 @@ jobs:
       - name: Install dependencies # Instala as dependências do seu projeto
         run: npm install # Ou 'yarn install' se usar yarn
 
+      # NOVO PASSO: Conceder permissões de execução para os binários
+      - name: Grant execute permissions for binaries
+        run: chmod +x ./node_modules/.bin/* # Adiciona permissão de execução aos arquivos em .bin
+
       - name: Build project # Roda o comando de build do Vite
         run: npm run build # Ou 'yarn build' se usar yarn
 
@@ -50,8 +54,7 @@ jobs:
       - name: Upload artifact # Empacota os arquivos da pasta dist para deploy
         uses: actions/upload-pages-artifact@v3
         with:
-          # O conteúdo da pasta dist será o que será publicado
-          path: './dist' # ✅ Confirme que seu build gera a pasta 'dist'
+          path: './dist' # Confirme que seu build gera a pasta 'dist'
 
   # Deployment job
   deploy:
